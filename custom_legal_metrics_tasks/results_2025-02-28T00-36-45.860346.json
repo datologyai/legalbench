@@ -1,0 +1,101 @@
+{
+  "config_general": {
+    "lighteval_sha": "c63a5e2f5e014c9762db76d928afc23948909b5c",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": -1,
+    "max_samples": null,
+    "job_id": 0,
+    "start_time": 151609.48839126,
+    "end_time": 151672.49114059,
+    "total_evaluation_time_secondes": "63.00274932998582",
+    "model_name": "Equall/Saul-7B-Base",
+    "model_sha": "",
+    "model_dtype": null,
+    "model_size": null
+  },
+  "results": {
+    "custom|citation_prediction_open|2": {
+      "citation_prediction_open_accuracy": 0.018867924528301886,
+      "citation_prediction_open_accuracy_stderr": 0.000581238653541074
+    },
+    "all": {
+      "citation_prediction_open_accuracy": 0.018867924528301886,
+      "citation_prediction_open_accuracy_stderr": 0.000581238653541074
+    }
+  },
+  "versions": {
+    "custom|citation_prediction_open|2": 0
+  },
+  "config_tasks": {
+    "custom|citation_prediction_open": {
+      "name": "citation_prediction_open",
+      "prompt_function": "get_citation_prediction_open_prompt",
+      "hf_repo": "nguha/legalbench",
+      "hf_subset": "citation_prediction_open",
+      "metric": [
+        {
+          "metric_name": "citation_prediction_open_accuracy",
+          "higher_is_better": true,
+          "category": "3",
+          "use_case": "1",
+          "sample_level_fn": "map",
+          "corpus_level_fn": "aggregate"
+        }
+      ],
+      "hf_revision": null,
+      "hf_filter": null,
+      "hf_avail_splits": [
+        "train",
+        "test"
+      ],
+      "trust_dataset": true,
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "train",
+      "few_shots_select": "random",
+      "generation_size": 32,
+      "generation_grammar": null,
+      "stop_sequence": [
+        "\n"
+      ],
+      "num_samples": null,
+      "suite": [
+        "custom"
+      ],
+      "original_num_docs": 53,
+      "effective_num_docs": 53,
+      "must_remove_duplicate_docs": false,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "custom|citation_prediction_open|2": {
+      "hashes": {
+        "hash_examples": "3878f855fdd684e0",
+        "hash_full_prompts": "cd3b1aedfca736a2",
+        "hash_input_tokens": "ddb589cc2223a039",
+        "hash_cont_tokens": "422507fd1e42a95a"
+      },
+      "truncated": 0,
+      "non_truncated": 53,
+      "padded": 0,
+      "non_padded": 53,
+      "effective_few_shots": 2.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "fb6fadad5d524d42",
+      "hash_full_prompts": "d59d285d71adabd0",
+      "hash_input_tokens": "2154b8d7ad1d415d",
+      "hash_cont_tokens": "5b1847267a068b88"
+    },
+    "truncated": 0,
+    "non_truncated": 53,
+    "padded": 0,
+    "non_padded": 53,
+    "num_truncated_few_shots": 0
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "config_general": {
+    "lighteval_sha": "c63a5e2f5e014c9762db76d928afc23948909b5c",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": -1,
+    "max_samples": null,
+    "job_id": 0,
+    "start_time": 151685.826715173,
+    "end_time": 151810.290706332,
+    "total_evaluation_time_secondes": "124.46399115899112",
+    "model_name": "Equall/Saul-7B-Base",
+    "model_sha": "",
+    "model_dtype": null,
+    "model_size": null
+  },
+  "results": {
+    "custom|definition_extraction|8": {
+      "definition_extraction_accuracy": 0.6972343522561864,
+      "definition_extraction_accuracy_stderr": 0.0005554375783411243
+    },
+    "all": {
+      "definition_extraction_accuracy": 0.6972343522561864,
+      "definition_extraction_accuracy_stderr": 0.0005554375783411243
+    }
+  },
+  "versions": {
+    "custom|definition_extraction|8": 0
+  },
+  "config_tasks": {
+    "custom|definition_extraction": {
+      "name": "definition_extraction",
+      "prompt_function": "get_definition_extraction_prompt",
+      "hf_repo": "nguha/legalbench",
+      "hf_subset": "definition_extraction",
+      "metric": [
+        {
+          "metric_name": "definition_extraction_accuracy",
+          "higher_is_better": true,
+          "category": "3",
+          "use_case": "1",
+          "sample_level_fn": "map",
+          "corpus_level_fn": "aggregate"
+        }
+      ],
+      "hf_revision": null,
+      "hf_filter": null,
+      "hf_avail_splits": [
+        "train",
+        "test"
+      ],
+      "trust_dataset": true,
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "train",
+      "few_shots_select": "random",
+      "generation_size": 32,
+      "generation_grammar": null,
+      "stop_sequence": [
+        "\n"
+      ],
+      "num_samples": null,
+      "suite": [
+        "custom"
+      ],
+      "original_num_docs": 687,
+      "effective_num_docs": 687,
+      "must_remove_duplicate_docs": false,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "custom|definition_extraction|8": {
+      "hashes": {
+        "hash_examples": "c8d3acd807e7aa0c",
+        "hash_full_prompts": "65ebb0d4cfc8f0b8",
+        "hash_input_tokens": "4d4439104ccc6c87",
+        "hash_cont_tokens": "fcdfe40636453697"
+      },
+      "truncated": 0,
+      "non_truncated": 687,
+      "padded": 0,
+      "non_padded": 687,
+      "effective_few_shots": 8.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "a40e8ba81b210a2f",
+      "hash_full_prompts": "1699ac68bddac9c9",
+      "hash_input_tokens": "f504c6dea6bd3675",
+      "hash_cont_tokens": "8303751926ab0834"
+    },
+    "truncated": 0,
+    "non_truncated": 687,
+    "padded": 0,
+    "non_padded": 687,
+    "num_truncated_few_shots": 0
+  }
+}

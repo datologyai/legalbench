@@ -1,0 +1,101 @@
+{
+  "config_general": {
+    "lighteval_sha": "c63a5e2f5e014c9762db76d928afc23948909b5c",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": -1,
+    "max_samples": null,
+    "job_id": 0,
+    "start_time": 151533.055351568,
+    "end_time": 151599.08502626,
+    "total_evaluation_time_secondes": "66.02967469199211",
+    "model_name": "Equall/Saul-7B-Base",
+    "model_sha": "",
+    "model_dtype": null,
+    "model_size": null
+  },
+  "results": {
+    "custom|successor_liability|3": {
+      "successor_liability_f1": 0.41935483870967744,
+      "successor_liability_f1_stderr": 0.0
+    },
+    "all": {
+      "successor_liability_f1": 0.41935483870967744,
+      "successor_liability_f1_stderr": 0.0
+    }
+  },
+  "versions": {
+    "custom|successor_liability|3": 0
+  },
+  "config_tasks": {
+    "custom|successor_liability": {
+      "name": "successor_liability",
+      "prompt_function": "get_successor_liability_prompt",
+      "hf_repo": "nguha/legalbench",
+      "hf_subset": "successor_liability",
+      "metric": [
+        {
+          "metric_name": "successor_liability_f1",
+          "higher_is_better": true,
+          "category": "3",
+          "use_case": "1",
+          "sample_level_fn": "map",
+          "corpus_level_fn": "aggregate"
+        }
+      ],
+      "hf_revision": null,
+      "hf_filter": null,
+      "hf_avail_splits": [
+        "train",
+        "test"
+      ],
+      "trust_dataset": true,
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": "train",
+      "few_shots_select": "random",
+      "generation_size": 16,
+      "generation_grammar": null,
+      "stop_sequence": [
+        "\n"
+      ],
+      "num_samples": null,
+      "suite": [
+        "custom"
+      ],
+      "original_num_docs": 47,
+      "effective_num_docs": 47,
+      "must_remove_duplicate_docs": false,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "custom|successor_liability|3": {
+      "hashes": {
+        "hash_examples": "de35b0a711e2ba6c",
+        "hash_full_prompts": "23d8ab84034a9678",
+        "hash_input_tokens": "19a1485e47828e0a",
+        "hash_cont_tokens": "65e0373193ead84f"
+      },
+      "truncated": 0,
+      "non_truncated": 47,
+      "padded": 0,
+      "non_padded": 47,
+      "effective_few_shots": 3.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "8f5aad0e0c734c20",
+      "hash_full_prompts": "547cf5ddea184fd6",
+      "hash_input_tokens": "bcdd299571ffc940",
+      "hash_cont_tokens": "0b360485e260e0e7"
+    },
+    "truncated": 0,
+    "non_truncated": 47,
+    "padded": 0,
+    "non_padded": 47,
+    "num_truncated_few_shots": 0
+  }
+}
